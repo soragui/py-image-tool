@@ -5,6 +5,7 @@ def composite_images(images,
                      output_image, 
                      margin=10, 
                      padding=10, 
+                     alignment='left', 
                      direction='vertical'):
     """
         Create composite image with image list and two directions
@@ -35,7 +36,13 @@ def composite_images(images,
     # Paste each image onto the composite image with margins and padding
     x_offset, y_offset = padding, padding
     for img in img_list:
-        
+
+        if 'center' == alignment:
+            if 'vertical' == direction:
+                x_offset = (width - img.width) // 2
+            elif 'horizontal' == direction:
+                y_offset = (height - img.height) // 2
+
         composite_img.paste(img, (x_offset, y_offset))
 
         if 'vertical' == direction:

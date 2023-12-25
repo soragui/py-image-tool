@@ -33,4 +33,5 @@ Result:
 |output_image|Image Path for compose result|
 |margin|Image Margin|
 |padding|Image Padding|
+|alignment|Left or Center|
 |direction|Compose direction Vertical or Horizon|
