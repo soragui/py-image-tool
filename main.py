@@ -14,7 +14,9 @@ horizon_compose = f'{IMAGE_PATH}horizon_compose.jpg'
 
 vertica_compose = f'{IMAGE_PATH}vertica_compose.jpg'
 
-composite_images(image_paths, horizon_compose, margin=10, padding=10, direction='horizontal')
-composite_images(image_paths, vertica_compose, margin=10, padding=10, direction='vertical')
+composite_images(image_paths, horizon_compose, margin=10, padding=10, 
+                 alignment='center', direction='horizontal')
+composite_images(image_paths, vertica_compose, margin=10, padding=10, 
+                 alignment='center', direction='vertical')
 
 
